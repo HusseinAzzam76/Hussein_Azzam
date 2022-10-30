@@ -1,0 +1,232 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "0ae088b0-4c8c-436e-8b8e-8fcc92b4f98b",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "8a761121-a204-43c2-b9a9-c77bd98a976e",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "0c984574-5f75-4954-97f9-dcca720049ae",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "96463e6c-55bc-44e8-abcb-2b3d5c3d31ff",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 28,
+   "id": "08a3d38b-2f2d-48af-aff4-895bda8f6379",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Requirement already satisfied: pydub in c:\\users\\hussein\\anaconda3\\lib\\site-packages (0.25.1)\n",
+      "Note: you may need to restart the kernel to use updated packages.\n"
+     ]
+    }
+   ],
+   "source": [
+    "pip install pydub"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "f2c8e644-c125-446f-8475-3ca072540f65",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "id": "1ec8cfbc-7327-435b-ab7e-31f91d9d2b38",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Requirement already satisfied: playsound in c:\\users\\hussein\\anaconda3\\lib\\site-packages (1.3.0)\n",
+      "Note: you may need to restart the kernel to use updated packages.\n"
+     ]
+    }
+   ],
+   "source": [
+    "pip install playsound"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 35,
+   "id": "71e5223f-e477-4be4-a177-eb3b0545eb2f",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "\n",
+    "import time\n",
+    "import winsound\n",
+    "from playsound import playsound\n",
+    "\n",
+    "from PIL import Image\n",
+    "Shawarma = \"C:/Users/Hussein/Desktop/Python Project/IMG_20210903_180119-scaled-e1630717929433.jpg\"\n",
+    "Falafel=\"C:/Users/Hussein/Desktop/Python Project/download.jpg\"\n",
+    "Restaurant=\"C:/Users/Hussein/Desktop/Python Project/hcmp183047_953374.jpeg\"\n",
+    "Kebab=\"C:/Users/Hussein/Desktop/Python Project/urfa-kebab.jpg\"\n",
+    "Hummus=\"C:/Users/Hussein/Desktop/Python Project/Hummus.jfif\"\n",
+    "Sucuk=\"C:/Users/Hussein/Desktop/Python Project/hellim_sucuk_Pfanne.jpg\"\n",
+    "Halloumi=\"C:/Users/Hussein/Desktop/Python Project/Halloumi.jpg\"\n",
+    "Dolma=\"C:/Users/Hussein/Desktop/Python Project/Dolma.png\"\n",
+    "\n",
+    "def restaurant():\n",
+    "    playsound(\"C:/Users/Hussein/Desktop/Python Project music/welcome.mp3\")\n",
+    "    print(\"Hello welcome to our restaurant,please let us know your order!,the menu will be shown in several seconds relax and sit back\")\n",
+    "    img=Image.open(Restaurant)\n",
+    "    img.show()\n",
+    "    \n",
+    "    \n",
+    "    time.sleep(5)\n",
+    "    order=int(input(\"THE MENU\\nPlease enter the digit for the Order!\\nShawarma:1\\nKebab:2\\nHummus:3\\nFalafel:4\\nSucuk:5\\nHalloumi:6\\nWeinblätter:7 \"))\n",
+    "    if order==1:\n",
+    "        print(\"The Shawarma is getting cooked wait a 30 seconds\")\n",
+    "        time.sleep(30)\n",
+    "        playsound(\"C:/Users/Hussein/Desktop/Python Project music/music.wav\")\n",
+    "        img2=Image.open(Shawarma)\n",
+    "        img2.show()\n",
+    "        print(\"Look at your taskbar your Shawarma is ready!!\")\n",
+    "    elif order==2:\n",
+    "        print(\"The Kebab is getting cooked wait a minute\")\n",
+    "        time.sleep(60)\n",
+    "        playsound(\"C:/Users/Hussein/Desktop/Python Project music/music.wav\")\n",
+    "        img3=Image.open(Kebab)\n",
+    "        img3.show()\n",
+    "        print(\"Look at your Taskbar the kebab is ready\")\n",
+    "    elif order==3:\n",
+    "        print(\"The Hummus is getting done give it some seconds\")\n",
+    "        time.sleep(20)\n",
+    "        playsound(\"C:/Users/Hussein/Desktop/Python Project music/music.wav\")\n",
+    "        img4=Image.open(Hummus)\n",
+    "        img4.show()\n",
+    "        print(\"The Hummus is done!\")\n",
+    "    elif order==4:\n",
+    "        print(\"The Falafel are getting ready wait 39 seconds\")\n",
+    "        time.sleep(30)\n",
+    "        playsound(\"C:/Users/Hussein/Desktop/Python Project music/music.wav\")\n",
+    "        img5=Image.open(Falafel)\n",
+    "        img5.show()\n",
+    "    elif order==5:\n",
+    "        print(\"The Sucuk is getting ready\")\n",
+    "        time.sleep(30)\n",
+    "        playsound(\"C:/Users/Hussein/Desktop/Python Project music/music.wav\")\n",
+    "        img6=Image.open(Sucuk)\n",
+    "        img6.show()\n",
+    "    elif order==6:\n",
+    "        print(\"The Halloumi is getting ready\")\n",
+    "        time.sleep(30)\n",
+    "        playsound(\"C:/Users/Hussein/Desktop/Python Project music/music.wav\")\n",
+    "        img7=Image.open(Halloumi)\n",
+    "        img7.show()\n",
+    "    elif order==7:\n",
+    "        print(\"The Dolma is getting ready\")\n",
+    "        time.sleep(20)\n",
+    "        playsound(\"C:/Users/Hussein/Desktop/Python Project music/music.wav\")\n",
+    "        img8=Image.open(Dolma)\n",
+    "        \n",
+    "              \n",
+    "    #order=int(input(\"Do you want to eat a shawarma or a Falafal,if you want to eat a shawarma enter number 2 if you want to eat a falafel enter number 3\"))\n",
+    "    #if order==2:\n",
+    "     #print(\"Your Shawarma is getting ready\")\n",
+    "      #  img = Image.open(filename)\n",
+    "        #img.show()\n",
+    "    #elif order==3:\n",
+    "     #   print(\"Your Falafel is getting ready in five minutes meanwhile listen to this song!\")\n",
+    "      #  song = AudioSegment.from_wav(\"sound.wav\")\n",
+    "       # play(song)\n",
+    "       # time.sleep(300)\n",
+    "       \n",
+    "        \n",
+    "        \n",
+    "    "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "6244ca1d-ba0d-4382-b2f9-d49a72c2a244",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "510595e7-0fb7-4cb7-b416-cb41c85a000e",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Hello welcome to our restaurant,please let us know your order!,the menu will be shown in several seconds relax and sit back\n"
+     ]
+    }
+   ],
+   "source": [
+    "restaurant()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "65238484-cf1d-4f9a-8d63-608906c7d693",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.9.13"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
